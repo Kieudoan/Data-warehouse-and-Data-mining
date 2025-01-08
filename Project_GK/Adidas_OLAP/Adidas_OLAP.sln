@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Adidas_OLAP", "Adidas_OLAP\Adidas_OLAP.dwproj", "{9239DA3B-E70E-47F1-9CAB-E952AB178CC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9239DA3B-E70E-47F1-9CAB-E952AB178CC8}.Development|Default.ActiveCfg = Development
+		{9239DA3B-E70E-47F1-9CAB-E952AB178CC8}.Development|Default.Build.0 = Development
+		{9239DA3B-E70E-47F1-9CAB-E952AB178CC8}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F5CA2C3-9797-428A-9044-6A5C9F34042C}
+	EndGlobalSection
+EndGlobal

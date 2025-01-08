@@ -1,0 +1,52 @@
+﻿
+
+--1 Doanh thu và lợi nhuận theo năm
+select {[Measures].[Total Sales],[Operating Profit]} on columns,
+		nonempty([Dim Date].[Year].[Year]) on rows
+from [Adidas Star Schema view];
+
+--2 Doanh thu của các sản phẩm theo từng năm
+select nonempty([Dim Date].[Year].[Year]) on columns,
+		nonempty([Dim Product].[Product].[Product]) on rows
+from [Adidas Star Schema view]
+where [Measures].[Total Sales];
+
+--3 Doanh thu của mỗi vùng trong các năm
+select nonempty([Dim Date].[Year].[Year]) on columns,
+		nonempty([Dim Location].[Region].[Region]) on rows
+from [Adidas Star Schema view]
+where [Measures].[Total Sales];
+
+--4 Lợi nhuận của các của hàng theo từng năm
+select nonempty([Dim Date].[Year].[Year]) on columns,
+		nonempty([Dim Retailer].[Retailer].[Retailer]) on rows
+from [Adidas Star Schema view]
+where [Measures].[Operating Profit];
+
+--5 Tháng có doanh thu cao nhất trong năm 2021
+select [Measures].[Total Sales] on columns,
+		topcount([Dim Date].[Month].[Month],1,[Measures].[Total Sales]) on rows
+from [Adidas Star Schema view]
+where [Dim Date].[Year].&[2021];
+
+-- 6 tổng số lượng của từng sản phẩm theo từng năm
+select nonempty([Dim Date].[Year].[Year]) on columns,
+		nonempty([Dim Product].[Product].[Product]) on rows
+from [Adidas Star Schema view]
+where [Measures].[Units Sold];
+
+--7 Sản phẩm bán ra nhiều nhất trong năm 2021
+select nonempty([Measures].[Units Sold]) on columns,
+		topcount(nonempty([Dim Product].[Product].[Product]),1,[Measures].[Units Sold]) on rows
+from [Adidas Star Schema view]
+where [Dim Date].[Year].&[2021]
+
+
+
+
+
+
+
+
+
+
